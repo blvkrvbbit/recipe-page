@@ -1,0 +1,172 @@
+@import url('./reset.scss');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: 'Outfit', sans-serif;
+  color: hsl(24, 5%, 18%);
+  @media screen and (min-width: 600px) {
+    background: hsl(30, 54%, 90%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul {
+  font-size: 1.8rem;
+  list-style-type: disc;
+  li::marker {
+    color: hsl(14, 45%, 36%);
+  }
+}
+
+ol {
+  font-size: 1.8rem;
+  list-style-type: decimal;
+  li::marker {
+    color: hsl(14, 45%, 36%);
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 0.2rem solid hsl(30, 18%, 87%);
+}
+
+footer {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  a {
+    color: hsl(14, 45%, 36%);
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 3rem;
+  @media screen and (min-width: 600px) {
+    width: 600px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.mobile-img {
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+.desktop-img {
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+}
+.recipe {
+  border-radius: 0.5rem;
+  @media screen and (min-width: 600px) {
+    background: hsl(0, 0%, 100%);
+    width: 600px;
+    padding: 2rem;
+    margin: 4rem auto;
+  }
+  .recipe-header {
+    margin-top: 2rem;
+    .title {
+      font-family: 'Young Serif', serif;
+      margin-bottom: 2rem;
+      font-size: 4rem;
+    }
+  } // recipe-header
+
+  .prep {
+    background-color: hsl(330, 100%, 98%);
+    padding: 2rem;
+    margin-top: 2rem;
+    .title {
+      font-size: 2.5rem;
+      color: hsl(332, 51%, 32%);
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+    ul {
+      padding: 0 2rem;
+      li {
+        margin-bottom: 1.5rem;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  } // prep
+  .ingredients,
+  .instructions,
+  .nutrition {
+    margin-top: 2rem;
+    .title {
+      font-family: 'Young Serif', serif;
+      margin-bottom: 2rem;
+      color: hsl(14, 45%, 36%);
+    }
+    ul,
+    ol {
+      padding: 0 2rem;
+      li {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  .nutrition {
+    table {
+      font-size: 1.8rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      tr {
+        width: 100%;
+        display: flex;
+        border-bottom: 0.2rem solid hsl(30, 18%, 87%);
+        padding: 2rem;
+        td {
+          width: 40%;
+          margin: 0 auto;
+          strong {
+            color: hsl(14, 45%, 36%);
+          }
+        }
+      }
+    }
+  }
+  hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
