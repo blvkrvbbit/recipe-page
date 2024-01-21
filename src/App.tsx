@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import Header from './components/header/header.component';
+import Prep from './components/prep/prep.component';
+import Ingredients from './components/ingredients/ingredients.component';
 
 function App() {
   useEffect(() => {
@@ -10,41 +13,23 @@ function App() {
       <div className='container'>
         <div className='recipe'>
           <img className='desktop-img' src='/img/image-omelette.jpeg' alt='' />
-          <header className='recipe-header'>
-            <h1 className='title'> Simple Omelette Recipe</h1>
-            <p>
-              An easy and quick dish, perfect for any meal. This classic
+          <Header
+            title='Simple Omelette Recipe'
+            desc=' An easy and quick dish, perfect for any meal. This classic
               omelette combines beaten eggs cooked to perfection, optionally
-              filled with your choice of cheese, vegetables, or meats.
-            </p>
-          </header>
-          <div className='prep'>
-            <h3 className='title'>Preparation time</h3>
-            <ul>
-              <li>
-                <strong>Total</strong>: Approximately 10 minutes
-              </li>
-              <li>
-                <strong>Preparation</strong>: 5 minutes
-              </li>
-              <li>
-                <strong>Cooking</strong>: 5 minutes
-              </li>
-            </ul>
-          </div>
-          <div className='ingredients'>
-            <h2 className='title'>Ingredients</h2>
-            <ul>
-              <li>2-3 large eggs</li>
-              <li>Salt, to taste</li>
-              <li>Pepper, to taste</li>
-              <li>1 tablespoon of butter or oil</li>
-              <li>
-                Optional fillings: cheese, diced vegetables, cooked meats, herbs
-              </li>
-            </ul>
-          </div>
-          <hr />
+              filled with your choice of cheese, vegetables, or meats.'
+          />
+          <Prep approxTime='10' prepTime='5' cookingTime='5' />
+          <Ingredients
+            ingredients={[
+              '2-3 large eggs',
+              'Salt, to taste',
+              'Pepper, to taste',
+              '1 tablespoon of butter or oil',
+              'Optional fillings: cheese, diced vegetables, cooked meats, herbs',
+            ]}
+          />
+
           <div className='instructions'>
             <h2 className='title'>Instructions</h2>
             <ol>
